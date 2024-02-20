@@ -1,0 +1,40 @@
+from tkinter import*
+from tkinter import ttk
+from subprocess import call
+def back():
+    apti.destroy()
+    call(["python",'m.py'])
+apti = Tk()
+apti.geometry("800x800")
+notebook=ttk.Notebook(apti)
+
+tab1= Frame(notebook)
+tab2= Frame(notebook)
+tab3= Frame(notebook)
+tab4= Frame(notebook)
+tab5= Frame(notebook)
+tab6= Frame(notebook)
+notebook.add(tab1,text="ques 1")
+notebook.add(tab2,text="ques 2")
+notebook.add(tab3,text="ques 3")
+notebook.add(tab4,text="ques 4")
+notebook.add(tab5,text="ques 5")
+notebook.add(tab6,text="ques 6")
+
+notebook.pack(expand=True,fill="both")
+
+Label(tab1,text="1. By walking at 3/4th of his usual speed, a man reaches office 20 minutes later than usual. What ishis usual time? ").pack()
+Label(tab1,text="A. 60 minutes    B. 45 minutes    C. 1 hr 10 minutes  D. none").pack()
+Label(tab2,text="2. 94 s'man rides at 30 kmph, he will reach office 1 hour late. If he rides at 40 kmph, he willreach office 1 hour early. Find his usual travel time?").pack()
+Label(tab2,text="A. 420 minutes    B. 360 minutes    C. 6 hr 10 minutes   D. 8 hours").pack()
+Label(tab3,text="3. A man rides his bicycle 10 km at an average speed of 12 km/hr and again travels 12 km. What is his average speed for the entire trip approximately?").pack()
+Label(tab3,text="A. 10.8kmph   B. 10.2 kmph  C. 11.2 kmph   D. 10 kmph").pack()
+Label(tab4,text="4, In a race of 1000 m, A beats B by 200 m or 20 seconds. What is the speed of A? ").pack()
+Label(tab4,text="A.12.5 m/sec     B. 13 m/sec     C. 15 m/sec   D. 11.5 m/sec").pack()
+Label(tab5,text=" 5. A police jeep parked by the roadside notices a car to pass by it with a speed of 60 km/hr? ").pack()
+Label(tab5,text="A. 75minutes     B. 55 minutes       C. 60minutes      D. None of these").pack()
+Label(tab6,text="6. Two trains travel towards each other on the same trakms/hr and 80 kmntinues doing so till the trains collide. What is the total the trains collide?  ").pack()
+Label(tab6,text="A. 300 km     B. 230 km      C. 160 km     D. None of these").pack()
+btn=Button(apti,text="<--",command=back)
+btn.place(x=400,y=600)
+apti.mainloop()
